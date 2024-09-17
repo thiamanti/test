@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f06, #f79d00);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1976d2;
+        }
+        .page {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('visible');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('visible');
+        }
+
+        function printPage() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- First Page -->
+        <div id="page1" class="page visible">
+            <h1>Apo ti porta sou perno</h1>
+            <button onclick="showPage('page2')">kai tiganizeis psaria</button>
+            <button onclick="showPage('page3')">me duo varia mastaria</button>
+        </div>
+
+        <!-- Page for Option A -->
+        <div id="page2" class="page">
+            <button onclick="showPage('page4')">kai mou petas enan kefte</button>
+            <button onclick="showPage('page5')">pes poios sou ekane sefte</button>
+        </div>
+
+        <!-- Page for Option B -->
+        <div id="page3" class="page">
+            <button onclick="showPage('page6')">kai ta 'grafe o tsleMentes</button>
+            <button onclick="showPage('page7')">kai mou to leg' o Mentes</button>
+        </div>
+
+        <!-- Page for Option C -->
+        <div id="page4" class="page">
+            <button onclick="showPage('page8')">kai petuxainei ton Mente</button>
+            <button onclick="showPage('page9')">8 Marti mou</button>
+        </div>
+
+        <!-- Page for Option D -->
+        <div id="page5" class="page">
+            <button onclick="showPage('page10')">oloi agapane ton Mente</button>
+            <button onclick="showPage('page11')">euxaristo, den kapnizo</button>
+        </div>
+
+        <!-- Page for Option E -->
+        <div id="page6" class="page">
+            <button onclick="showPage('page12')">Kalimera Ellada mou</button>
+            <button onclick="showPage('page13')">ena tria ena duo</button>
+        </div>
+
+        <!-- Page for Option F -->
+        <div id="page7" class="page">
+            <button onclick="showPage('page14')">nostimi i paloma to savvato</button>
+            <button onclick="showPage('page15')">Varu to eurokoinovoulio</button>
+        </div>
+
+        <!-- Final Page for Option G -->
+        <div id="page8" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>kai tiganizeis psaria</p>
+            <p>kai mou petas enan kefte</p>
+            <p>kai petuxainei ton Mente</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option H -->
+        <div id="page9" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>kai tiganizeis psaria</p>
+            <p>kai mou petas enan kefte</p>
+            <p>8 Marti mou</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option I -->
+        <div id="page10" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>kai tiganizeis psaria</p>
+            <p>pes poios sou ekane sefte</p>
+            <p>oloi agapane ton Mente</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option J -->
+        <div id="page11" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>kai tiganizeis psaria</p>
+            <p>pes poios sou ekane sefte</p>
+            <p>euxaristo, den kapnizo</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option K -->
+        <div id="page12" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>me duo varia mastaria</p>
+            <p>kai ta 'grafe o tsleMentes</p>
+            <p>Kalimera Ellada mou</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option L -->
+        <div id="page13" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>me duo varia mastaria</p>
+            <p>kai ta 'grafe o tsleMentes</p>
+            <p>ena tria ena duo</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option M -->
+        <div id="page14" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>me duo varia mastaria</p>
+            <p>kai mou to leg' o Mentes</p>
+            <p>nostimi i paloma to savvato</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+
+        <!-- Final Page for Option N -->
+        <div id="page15" class="page">
+            <p>Apo ti porta sou perno</p>
+            <p>me duo varia mastaria</p>
+            <p>kai mou to leg' o Mentes</p>
+            <p>Varu to eurokoinovoulio</p>
+            <!-- Print Button -->
+            <button onclick="printPage()">Print</button>
+        </div>
+    </div>
+</body>
+</html>
+
